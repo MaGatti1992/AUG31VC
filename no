@@ -1,0 +1,17 @@
+[33mcommit 339686edfd6c1ab0f086699b56b5554b5d3fc98e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: manikantagatti1992@gmail.com <manikantagatti1992@gmail.com>
+Date:   Wed Aug 31 23:27:39 2022 +0530
+
+    Initial Commit
+
+[33mcommit edc07b88a5f3e3b0601768d63b80ace81fb2d940[m
+Author: manikantagatti1992@gmail.com <manikantagatti1992@gmail.com>
+Date:   Wed Aug 31 23:16:24 2022 +0530
+
+    Find
+
+[33mcommit 3f987b79c5756eb2ba9bdb01aa743a8f7d7ea687[m
+Author: manikantagatti1992@gmail.com <manikantagatti1992@gmail.com>
+Date:   Wed Aug 31 23:13:55 2022 +0530
+
+    CheckIF
