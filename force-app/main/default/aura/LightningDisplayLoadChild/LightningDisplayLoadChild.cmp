@@ -1,0 +1,18 @@
+<aura:component controller="LightningDisplay">
+    <aura:registerEvent name="mani" type="c:LightningDisplayLoad"/>
+    <aura:attribute name="acc" type="Account" default="{sObjecttype:'Account'}"/>
+    <lightning:card title="Just Check">
+        <aura:set attribute="actions">
+            <lightning:button label="Submit" onclick="{!c.submitRecs}"/>
+            <lightning:button label="Clear" onclick="{!c.clearRec}"/>
+        </aura:set>
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem size="6">
+                <lightning:input label="Enter Name" value="{!v.acc.Name}"/>
+                <lightning:input label="Enter Phone" value="{!v.acc.Phone}"/>
+                <lightning:input label="Enter Industry" value="{!v.acc.Industry}"/>
+                <lightning:input label="Enter Rating" value="{!v.acc.Rating}"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+</aura:component>

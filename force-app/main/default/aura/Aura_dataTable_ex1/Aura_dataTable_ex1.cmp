@@ -1,0 +1,28 @@
+<aura:component controller="Aura_Data">
+    <aura:attribute name="accounts" type="Account" default="{sObjectType:'Account'}"/>
+    <aura:attribute name="con" type="Contact[]"/>
+    <aura:attribute name="column" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.show}"/>
+        	<lightning:layout multipleRows="true">
+                <lightning:layoutItem size="12" padding="around-small">
+                    Account Details
+                </lightning:layoutItem>
+            <lightning:layoutItem size="4" padding="around:small">
+                <div>
+                    <lightning:input label="Account Name" value="{!v.accounts.name}"/>
+                    <lightning:input label="Phone" value="{!v.accounts.phone}"/>
+                    <lightning:input label="Industry" value="{!v.accounts.industry}"/>
+                    <lightning:input label="Rating" value="{!v.accounts.rating}"/>
+                    <lightning:buttonGroup>
+                        <lightning:button label="Submit" onclick="{!c.sub}"/>
+                        <lightning:button label="Cancel" onclick="{!c.canMe}"/>
+                    </lightning:buttonGroup>
+                </div>
+            </lightning:layoutItem> 
+            <lightning:layoutItem size="8" padding="around:small">
+                <lightning:dataTable keyField="id" data="{!v.con}" columns="{!v.column}" hideCheckboxColumn="False"/>
+            </lightning:layoutItem> 
+        	</lightning:layout>
+    
+    
+</aura:component>

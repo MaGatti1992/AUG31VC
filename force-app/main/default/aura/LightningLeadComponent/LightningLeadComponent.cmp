@@ -1,0 +1,26 @@
+<aura:component >
+    
+    <lightning:card iconName="standard:lead">
+        
+        <aura:set attribute="title">
+            Lead<p></p>
+            <b> MS Kathy Snyder</b>
+        </aura:set>
+        <aura:set attribute="actions">
+            <lightning:button label="Follow" iconName="utility:add"/>
+            <lightning:buttongroup>
+                
+                <lightning:button label="New Case" />
+                <lightning:button label="New Note" />
+                <lightning:button label="Submit for approval" />
+                <lightning:buttonMenu alternativeText="Menu">
+                    <lightning:menuItem label="clone"/>
+                    <lightning:menuItem label="check for new data"/>
+                    <lightning:menuSubheader label="DML" />
+                    <lightning:menuItem label="edit"/>
+                    <lightning:menuItem label="delete"/>
+                </lightning:buttonMenu>
+            </lightning:buttongroup>
+        </aura:set>
+    </lightning:card>
+</aura:component>

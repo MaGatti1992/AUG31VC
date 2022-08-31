@@ -1,0 +1,22 @@
+<aura:component >
+    <aura:attribute name="ages" type="Integer[]" default="[22,33,44,55,66]"/>
+    <aura:attribute name="cities" type="List" default="Blr, hyd, mum"/>
+    
+    
+        <lightning:layout>
+            <lightning:layoutItem size="4">
+                <aura:iteration items="{!v.ages}" var="aa">
+                <p> {!aa}</p>
+                    </aura:iteration>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4">
+                 <aura:iteration items="{!v.cities}" var="ab">
+                <p> {!ab}</p>
+                    </aura:iteration>
+                
+            </lightning:layoutItem>
+        </lightning:layout>
+    
+    
+    
+</aura:component>

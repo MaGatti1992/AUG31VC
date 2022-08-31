@@ -1,0 +1,15 @@
+<aura:component controller="LightningRelatedACO">
+    
+    <aura:attribute name="anme" type="string" />
+    <aura:attribute name="aindu" type="string"/>
+    <aura:registerEvent name="gatti" type="c:LightningRelatedACOEvent"/>
+    
+    <lightning:card title="Account Search">
+        
+        <lightning:input label="Enter Name" value="{!v.anme}"/>
+        <lightning:input label="Enter Industry" value="{!v.aindu}"/>
+        
+        <lightning:button label="Search" variant="brand" onclick="{!c.searchMe}"/>
+        <lightning:button label="Clear" variant="brand" onclick="{!c.clearMe}"/>
+    </lightning:card>        
+</aura:component>

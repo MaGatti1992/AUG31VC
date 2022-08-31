@@ -1,0 +1,37 @@
+<aura:component >
+    <aura:attribute name="acc" type="Account" default="{sObjectType:'Account'}"/>
+    <aura:attribute name="con" type="sObject" default="{sObjectType:'Contact'}"/>
+    <aura:attribute name="flag" type="boolean" default="false"/>
+    <lightning:card title="Account Details">
+    	<aura:set attribute="actions">
+            <lightning:button label="Create" onclick="{!c.clickme}"/>
+            <lightning:button label="Cancel" onclick="{!c.cancelme}"/>
+        </aura:set>
+        Name : Manikanta &nbsp;&nbsp;
+        Phone : 0112233454
+    </lightning:card>
+        	<lightning:layout multiplerows="true">
+            	<lightning:layoutItem size="4" padding="around:small">
+                	<div class="box">
+                    	<center><h1>Account Details</h1></center>
+                        <lightning:input label="Account Name" value="{!v.acc.Name}"/>
+                        <lightning:input label="Account Phone" value="{!v.acc.Phone}"/>
+                        <lightning:input label="Account Industry" value="{!v.acc.Industry}"/>
+                        <lightning:input label="Account Rating" value="{!v.acc.Rating}"/>
+                    </div>
+                </lightning:layoutItem>
+                <aura:if istrue="{!v.flag}">
+                <lightning:layoutItem size="8" padding="around:small">
+                	<div class="box">
+                    	<center><h1>Contact Details</h1></center>
+                        <lightning:input label="Contact Last Name" value="{!v.con.LastName}"/>
+                        <lightning:input label="Contact First Name" value="{!v.con.FirstName}"/>
+                        <lightning:input label="Contact Phone" value="{!v.con.Phone}"/>
+                        <lightning:input label="Contact Email" value="{!v.con.Email}"/>
+                    </div>
+                </lightning:layoutItem>
+                </aura:if>
+            </lightning:layout>
+        
+    
+</aura:component>

@@ -1,0 +1,3 @@
+<aura:component controller="LightningCSSCheck">
+    <lightning:button label="Create Account" onclick="{!c.callMe}"/>
+</aura:component>

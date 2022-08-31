@@ -1,0 +1,22 @@
+<aura:component controller="LightningWithParams">
+    <aura:attribute name="aName" type="string"/>
+    <aura:attribute name="aPhone" type="string"/>
+    <aura:attribute name="aIndustry" type="string"/>
+    <aura:attribute name="aRating" type="string"/>
+    <aura:attribute name="flag" type="boolean" default="false"/>
+    
+    <lightning:card title="Account Info">
+        <aura:set attribute="actions">
+            <lightning:button label="Insert" variant="brand" onclick="{!c.accInsert}"/>
+            <lightning:button label="Clear" variant="brand" onclick="{!c.clearInfo}"/>
+        </aura:set>
+        <lightning:layout>
+            <lightning:layoutItem size="6">
+                <lightning:input label="Account Name" value="{!v.aName}"/>
+                <lightning:input label="Account Phone" value="{!v.aPhone}"/>
+                <lightning:input label="Account Industry" value="{!v.aIndustry}"/>
+                <lightning:input label="Account Rating" value="{!v.aRating}"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+</aura:component>

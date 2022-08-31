@@ -1,0 +1,43 @@
+<aura:component controller="LightningCSSCheck">
+    <aura:attribute name="accName" type="string"/>
+    <aura:attribute name="accPhone" type="string"/>
+    <aura:attribute name="accRating" type="string"/>
+    <aura:attribute name="accIndustry" type="string"/>
+    <aura:attribute name="accId" type="string"/>
+    <aura:attribute name="flag" type="boolean" default="false"/>
+    <lightning:card iconName="standard:account" >
+        <aura:set attribute="title">
+        	<h1>Account</h1>
+            <h1>New Account</h1>
+        </aura:set>
+    	<aura:set attribute="actions">
+            <lightning:buttonGroup>
+                <lightning:button label="Create Account" onclick="{!c.create}"/>
+                <lightning:button label="Cancel" onclick="{!c.cancel}"/>
+            </lightning:buttonGroup>
+        </aura:set>
+            <lightning:layout multipleRows="true">
+                <lightning:layoutItem size="6" padding="around:small">
+                    <div class="box">
+                        <center><h1>Account Info</h1></center>
+                        <lightning:input label="Name" value="{!v.accName}" />
+                        <lightning:input label="Phone" value="{!v.accPhone}" />
+                        <lightning:input label="Rating" value="{!v.accRating}" />
+                        <lightning:input label="Industry" value="{!v.accIndustry}" />
+                    </div>
+                </lightning:layoutItem>
+                <aura:if isTrue="{!v.flag}">
+                <lightning:layoutItem>
+                	<div class="box">
+                    	<center><b><h1>Output</h1></b></center><br/><br/><br/>
+                        Id : {!v.accId}<br/><br/>
+                        Name: {!v.accName} <br/><br/>
+                        Phone:{!v.accPhone} <br/><br/>
+                        Rating:{!v.accRating} <br/><br/>
+                        Industry :{!v.accIndustry} <br/>
+                    </div>
+                </lightning:layoutItem>
+                </aura:if>
+            </lightning:layout>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,9 @@
+<aura:component controller="LightningRelatedACO">
+    <aura:attribute name="john" type="Object" />
+    <aura:attribute name="columns" type="List"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.colmeo}"/>
+    <aura:handler event="c:LightningRelatedACOEvent" action="{!c.getdet}"/>
+    
+    <lightning:dataTable keyField="id" data="{!v.john}" columns="{!v.columns}"/>
+</aura:component>

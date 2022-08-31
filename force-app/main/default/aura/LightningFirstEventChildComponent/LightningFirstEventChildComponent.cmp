@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:registerEvent name="nickName" type="c:LightningFirstEvent"/>
+    <aura:attribute name="stName" type="String"/>
+    <aura:attribute name="stNumber" type="String"/>
+    <lightning:card title="Child Component">
+        this is child component
+        <lightning:input label="Enter the name" value="{!v.stName}"/>
+        <lightning:input label="Enter number" value="{!v.stNumber}"/>
+        <lightning:button label="Submit" onclick="{!c.submitMe}"/>
+    </lightning:card>
+</aura:component>

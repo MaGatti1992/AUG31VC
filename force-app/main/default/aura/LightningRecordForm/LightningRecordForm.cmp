@@ -1,0 +1,47 @@
+<aura:component >
+    <lightning:layout multipleRows="true">
+        <lightning:layoutItem size="2">
+            <lightning:recordForm 
+                          recordId="0015g00000mD7KLAA0"
+                          objectApiName="Account"
+                          layoutType="Full"
+                          mode="ReadOnly"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem size="2">
+            <lightning:recordForm 
+                          recordId="0015g00000mD7KLAA0"
+                          objectApiName="Account"
+                          layoutType="Full"
+                          mode="View"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem size="2">
+            <lightning:recordForm 
+                          recordId="0015g00000mD7KLAA0"
+                          objectApiName="Account"
+                          layoutType="Full"
+                          mode="Edit"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem size="2">
+            <lightning:recordForm 
+                          recordId="0015g00000mD7KLAA0"
+                          objectApiName="Account"
+                          layoutType="Compact"
+                          mode="ReadOnly"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem size="2">
+            <lightning:recordForm 
+                          recordId="0015g00000mD7KLAA0"
+                          objectApiName="Account"
+                          layoutType="Compact"
+                          mode="View"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem size="2">
+            <lightning:recordForm 
+                          recordId="0015g00000mD7KLAA0"
+                          objectApiName="Account"
+                          layoutType="Compact"
+                          mode="Edit"/>
+        </lightning:layoutItem>
+    </lightning:layout>
+    
+</aura:component>

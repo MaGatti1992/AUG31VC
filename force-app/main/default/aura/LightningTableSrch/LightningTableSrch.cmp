@@ -1,0 +1,20 @@
+<aura:component controller="LightningtableSearch">
+     <aura:handler name="init" value="{!this}" action="{!c.getcolumns}"/>
+    <aura:attribute name="sAcc" type="Account[]"/>
+    <aura:attribute name="sText" type="String"/>
+    <aura:attribute name="flag" type="boolean" default="false"/>
+    
+    <aura:attribute name="columns" type="List"/>
+   
+    <lightning:card title="Account's Table">
+        <aura:set attribute="title">
+            <lightning:input label="Enter search text" value="{!v.sText}"/>
+            <lightning:button label="Search" onclick="{!c.getDtls}"/>
+        </aura:set>
+        <aura:if isTrue="{!v.sAcc.length>0}">
+        <lightning:dataTable keyField="id" data="{!v.sAcc}" columns="{!v.columns}"/>
+        </aura:if>
+         
+    </lightning:card>
+    
+</aura:component>

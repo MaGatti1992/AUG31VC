@@ -1,0 +1,13 @@
+<aura:component >
+	<lightning:card title="Usage by auraid">
+        
+		<aura:set attribute="footer">
+            <lightning:button label="Add" onclick="{!c.addme}" aura:id="addition"/>
+            <lightning:button label="Sub" onclick="{!c.addme}" aura:id="substraction"/>
+            <lightning:button label="Mul" onclick="{!c.addme}" aura:id="multiplication"/>
+        </aura:set>        
+        <lightning:input label="Add first number" type="Number" aura:id="firstvalue"/>
+        <lightning:input label="Add second number" type="Number" aura:id="secondvalue"/>
+        <lightning:input label="Result is" type="Number" aura:id="resultvalue"/>
+    </lightning:card>
+</aura:component>

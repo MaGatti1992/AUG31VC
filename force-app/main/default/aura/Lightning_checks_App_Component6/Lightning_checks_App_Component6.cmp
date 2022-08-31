@@ -1,0 +1,11 @@
+<aura:component >
+	<lightning:card title="Calc with Aura:id">
+    	<aura:set attribute="footer">
+            <lightning:button label="Addition" aura:id="adds" onclick="{!c.add}"/>
+            <lightning:button label="Multiplication" aura:id="muls" onclick="{!c.add}"/>
+        </aura:set>
+        <lightning:input label="Enter the first Value" aura:id="aval"/>
+        <lightning:input label="Enter the first Value" aura:id="bval"/>
+        <lightning:input label="Result " aura:id="res"/>
+    </lightning:card>
+</aura:component>

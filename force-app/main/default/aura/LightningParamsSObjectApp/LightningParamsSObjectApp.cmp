@@ -1,0 +1,17 @@
+<aura:component controller="AuraSObjectInsertion">
+    <aura:attribute name="sAcc" type="Account" default="{sObjectType:'Account'}"/>
+    <lightning:card title="SObject Insertion">
+        <aura:set attribute="actions">
+            <lightning:button label="Insert" variant="brand" onclick="{!c.insertInfo}"/>
+            <lightning:button label="Cancel" variant="brand" onclick="{!c.cancelInfo}"/>
+        </aura:set>
+        <lightning:layout>
+        <lightning:layoutItem size="4">
+        <lightning:input label="Account Name" value="{!v.sAcc.Name}"/>
+        <lightning:input label="Account Phone" value="{!v.sAcc.Phone}"/>
+        <lightning:input label="Account Industry" value="{!v.sAcc.Industry}"/>
+        <lightning:input label="Account Rating" value="{!v.sAcc.Rating}"/>
+        </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+</aura:component>

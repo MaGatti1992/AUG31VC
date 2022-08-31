@@ -1,0 +1,16 @@
+<aura:component controller="LightningtableSearch">
+     <aura:handler name="init" value="{!this}" action="{!c.getcolumns}"/>
+    <aura:attribute name="sAcc" type="Account[]"/>
+    <aura:attribute name="sText" type="String"/>
+    
+    <aura:attribute name="columns" type="List"/>
+   
+    <lightning:card title="Account's Table">
+        <aura:set attribute="title">
+            <lightning:input label="Enter search text" value="{!v.sText}"/>
+            <lightning:button label="Search" onclick="{!c.getData}"/>
+        </aura:set>
+        <lightning:dataTable keyField="id" data="{!v.sAcc}" columns="{!v.columns}"/> 
+    </lightning:card>
+    
+</aura:component>

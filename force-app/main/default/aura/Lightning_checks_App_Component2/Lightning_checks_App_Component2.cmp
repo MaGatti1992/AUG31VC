@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="num1" type="decimal"/>
+    <aura:attribute name="num2" type="decimal"/>
+    <aura:attribute name="res" type="decimal"/>
+    <lightning:card title="Substraction">
+        <aura:set attribute="actions">
+            <lightning:button label="Substraction" onclick="{!c.subs}"/>
+        </aura:set>
+        num : {!v.num1}<br/>
+        val : {!v.num2}<br/>
+        res : {!v.res}
+        
+    </lightning:card>
+</aura:component>

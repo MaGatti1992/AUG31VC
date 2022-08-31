@@ -1,0 +1,18 @@
+<aura:component controller="SobjDataAura">
+    <aura:attribute name="acc" type="account"/>
+    <aura:handler name="init" value="{!this}" action="{!c.callout}"/>
+    <lightning:card>
+    <aura:set attribute="title">
+        <h1>Account </h1>
+        <h1>{!v.acc.Name} </h1>
+    </aura:set>
+    <aura:set attribute="actions">
+        <lightning:button label="Save"/>
+        <lightning:button label="New Account"/>
+        <lightning:button label="New Task"/>
+    </aura:set>
+       		<p>Industry:</p> {!v.acc.Industry}
+        	<p>Phone:</p> {!v.acc.Phone}
+        	<p>Fax:</p> {!v.acc.Fax}
+        </lightning:card>
+</aura:component>

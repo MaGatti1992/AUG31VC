@@ -1,0 +1,15 @@
+<aura:component >
+    <aura:attribute name="aval" type="integer"/>
+    <aura:attribute name="bval" type="integer"/>
+    <aura:attribute name="val" type="integer"/>
+    <lightning:card title="CalC"> 
+        <aura:set attribute="actions">
+            <lightning:button label="Add" aura:id="adds" name="one" onclick="{!c.add}"/>
+            <lightning:button label="Multiply" aura:id="muls" name="two" onclick="{!c.add}"/>
+            <lightning:button label="Sub" aura:id="subs" name="three" onclick="{!c.add}"/>
+        </aura:set>
+        <lightning:input label="Enter first value" value="{!v.aval}"/>
+        <lightning:input label="Enter second value" value="{!v.bval}"/>
+        <lightning:input label="Result" value="{!v.val  }"/>
+    </lightning:card>
+</aura:component>

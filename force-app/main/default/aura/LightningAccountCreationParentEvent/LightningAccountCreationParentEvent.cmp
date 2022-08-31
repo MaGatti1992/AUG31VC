@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:attribute name="bAcc" type="List" default="[]"/>
+    <aura:attribute name="bcolumns" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.getDet}"/>
+    <aura:handler name="accEvent" event="c:LightningAccountCreationEvent" action="{!c.findOut}"/>
+    
+    
+    <c:LightningAccountCreationChildEvent />
+    
+    
+         <lightning:dataTable keyField="id" data="{!v.bAcc}" columns="{!v.bcolumns}"/>
+      
+</aura:component>
